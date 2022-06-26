@@ -1,6 +1,6 @@
-import { Low, JSONFile } from 'lowdb';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { Low, JSONFile } from "lowdb";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
 let db = null;
 
@@ -8,18 +8,18 @@ let db = null;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export async function createConnection() {
-    // path for db.json
-    const file = join(__dirname, '../db.json');
-    
-    // database
-    const adapter = new JSONFile(file);
-    db = new Low(adapter);
+  // path for db.json
+  const file = join(__dirname, "../db.json");
 
-    await db.read();
+  // database
+  const adapter = new JSONFile(file);
+  db = new Low(adapter);
 
-    db.data ||= {tasks: []};
-    
-    await db.write();
+  await db.read();
+
+  db.data ||= { tasks: [] };
+
+  await db.write();
 }
 
 export const getConnection = () => db;
