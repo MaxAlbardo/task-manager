@@ -3,7 +3,7 @@
 
 ## Crear Archivo .env
 ***
-# Crear en archivo raiz al lado del .env.example, copiar y pegar contenido del example
+# Crear archivo .env en ruta raiz al lado del .env.example, copiar y pegar contenido del example
 
 Puedes elegir el puerto que queireas utilizar. Ejemplo 8000
 ```
