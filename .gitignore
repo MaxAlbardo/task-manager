@@ -1,0 +1,9 @@
+# NODE
+package-lock.json
+node_modules
+
+# ENV
+.env
+
+# Database
+db.json
